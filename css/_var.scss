@@ -1,0 +1,181 @@
+$main-color: #2196f3;
+$main-color-alt: #1787e0;
+$main-transition: 0.3s;
+$main-padding-top: 100px;
+$main-padding-bottom: 100px;
+$section-background: #ececec;
+//  media queries
+$max-mobile: "max-width:767px";
+$min-mobile: "min-width:768px";
+$max-med: "max-width:991px";
+$min-med: "min-width:992px";
+$max-lg: "max-width:1199px";
+$min-lg: "min-width:1200px";
+//
+@mixin media($point) {
+  @if $point== "mobile" {
+    @media ($max-mobile) {
+      @content;
+    }
+  } @else if $point== "small" {
+    @media ($max-med) {
+      @content;
+    }
+  } @else if $point== "medium" {
+    @media ($max-lg) {
+      @content;
+    }
+  } @else if $point == "large" {
+    @media ($min-lg) {
+      @content;
+    }
+  }
+}
+//  media queries
+
+// light and dark mode
+$them: "dark";
+%lightORdark {
+  @if $them== "light" {
+    background-color: white;
+    color: black;
+  } @else {
+    background-color: black;
+    color: white;
+  }
+}
+// light and dark mode
+// list style
+@mixin list-reset {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+// list style
+// circle
+@mixin circle($value) {
+  width: $value;
+  height: $value;
+  border-radius: 50%;
+}
+// circle
+// centering by flex
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// centering by flex
+// overlay
+
+@mixin overlay($color, $opacity) {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
+// overlay
+// grid
+@mixin gridcol($min, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+  gap: $gap;
+}
+// grid
+// animation
+@mixin keyF($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+}
+// animation
+
+// hover card
+@mixin cardhover($elementName, $rotateDeg, $rotateWay) {
+  #{$elementName} {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    .card1,
+    .card2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      text-transform: capitalize;
+      color: white;
+    }
+    .card2 {
+      backface-visibility: hidden;
+      @if $rotateWay == "y" {
+        transform: rotateY($rotateDeg);
+      } @else {
+        transform: rotateX($rotateDeg);
+      }
+    }
+    &:hover {
+      @if $rotateWay == "y" {
+        transform: rotateY(-$rotateDeg);
+      } @else {
+        transform: rotateX(-$rotateDeg);
+      }
+    }
+  }
+}
+// zic
+// shadow
+@mixin shadow {
+  box-shadow: 0px 12px 20px 0px rgba(black, 0.13),
+    0px 2px 4px 0px rgba(black, 0.12);
+}
+// shadow
+@mixin ziczack($className, $height) {
+  .#{$className} {
+    position: relative;
+    z-index: 100;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: $height;
+      background-size: $height $height;
+      background-image: linear-gradient(135deg, white 25%, transparent 25%),
+        linear-gradient(225deg, white 25%, transparent 25%);
+    }
+  }
+}
+
+// zic
+// hover card
+// container
+@mixin container {
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+}
+
+// container
