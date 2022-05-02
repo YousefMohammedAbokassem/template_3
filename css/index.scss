@@ -1335,7 +1335,7 @@ body .features {
   background-color: white;
   display: flex;
   min-height: 100vh;
-  @include media("small"){
+  @include media("small") {
     flex-wrap: wrap;
   }
   .image {
@@ -1345,10 +1345,20 @@ body .features {
     @include flexcenter();
     position: relative;
     flex-basis: 50%;
+
     @include media("small") {
       flex-basis: 100%;
     }
+
     z-index: 1;
+    .img2 {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: changeBack 5s linear infinite alternate-reverse;
+    }
     .content {
       text-align: center;
       z-index: 2;
@@ -1362,6 +1372,7 @@ body .features {
         font-size: 18px;
         max-width: 500px;
       }
+
       img {
         width: 300px;
         max-width: 100%;
@@ -1378,10 +1389,10 @@ body .features {
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-     @include media("small") {
+    @include media("small") {
       flex-basis: 50%;
     }
-     @include media("mobile") {
+    @include media("mobile") {
       flex-basis: 90%;
     }
     h1 {
@@ -1408,7 +1419,138 @@ body .features {
   }
 }
 // end request
+// start footer
+.footer {
+  background-color: #191919;
+  padding: 0px {
+    top: 70px;
+  }
+  .container {
+    @include gridcol(250px, 40px);
+    .box:first-child {
+      h2 {
+        font-size: 50px;
+        color: white;
+        margin-bottom: 10px;
+      }
+      $names: (
+        "facebook": #1877f2,
+        "twitter": #1da1f2,
+        "youtupe": #ff0000,
+      );
+      @each $name, $color in $names {
+        .icons {
+          .#{$name} {
+            text-decoration: none;
+            color: #b9b9b9;
+            background-color: #313131;
+            width: 60px;
+            height: 60px;
+            font-size: 22px;
+            margin-right: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+              background-color: $color;
+            }
+          }
+        }
+      }
+      p {
+        line-height: 1.5;
+        color: #b9b9b9;
+        margin: 10px 0px;
+      }
+    }
+    .box:nth-child(2) {
+      // background-color: white;
+      ul {
+        @include list-reset();
+        li {
+          padding: 20px 0px;
+          a {
+            text-decoration: none;
+            color: #b9b9b9;
+            padding: 0px 25px;
+            position: relative;
+            transition: $main-transition;
+            &::before {
+              content: "\F101";
+              font-family: "Font Awesome 5 Free";
+              color: $main-color;
+              position: absolute;
+              margin-left: -21px;
+              font-weight: 900;
+              margin-left: -20px;
+            }
+          }
+          &:hover a {
+            color: white;
+            padding-left: 40px;
+          }
+        }
+        li:not(:last-child) {
+          border-bottom: 1px solid #444;
+        }
+      }
+    }
+    .box:nth-child(3) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      .info {
+        display: flex;
+        align-items: center;
+        color: #b9b9b9;
 
+        i {
+          color: $main-color;
+          font-size: 25px;
+          margin-right: 10px;
+          @include media("mobile") {
+            margin: 0px 0px 15px;
+          }
+        }
+        p {
+          line-height: 1.5;
+        }
+        div {
+          span {
+            display: block;
+            margin: 10px 0px;
+          }
+        }
+        @include media("mobile") {
+          flex-direction: column;
+          margin: 15px 0px;
+        }
+      }
+      @include media("mobile") {
+        flex-direction: column;
+      }
+    }
+    .box:last-child {
+      img {
+        border: 3px solid white;
+        margin: 2px;
+      }
+    }
+  }
+  @include media("mobile") {
+    text-align: center;
+  }
+}
+// end footer
+@include keyF(changeBack) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @include keyF(up_) {
   from {
     transform: translateY(0px);
