@@ -98,6 +98,9 @@
     border: 1px solid white;
     transition-delay: 0.5s;
   }
+  @include media("mobile") {
+    font-size: 20px;
+  }
 }
 body .article {
   padding: $main-padding-top 0px;
@@ -168,7 +171,7 @@ body .header {
         display: block;
         @include media("mobile") {
           font-size: 16px;
-          padding: 5px 3px;
+          padding: 5px 0px;
         }
         @include flexcenter();
         &::before {

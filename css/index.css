@@ -137,6 +137,12 @@
   transition-delay: 0.5s;
 }
 
+@media (max-width: 767px) {
+  .main-anim {
+    font-size: 20px;
+  }
+}
+
 body .article {
   padding: 100px 0px;
 }
@@ -268,7 +274,7 @@ body .header .nav li > #header_a {
 @media (max-width: 767px) {
   body .header .nav li > #header_a {
     font-size: 16px;
-    padding: 5px 3px;
+    padding: 5px 0px;
   }
 }
 
