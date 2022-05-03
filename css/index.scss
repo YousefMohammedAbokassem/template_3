@@ -897,6 +897,7 @@ body .features {
 .how-it-work {
   padding: $main-padding-top 0px;
   background-color: $section-background;
+  overflow: hidden;
   .container {
     @include media("small") {
       flex-wrap: wrap;

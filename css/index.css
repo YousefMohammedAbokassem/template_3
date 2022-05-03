@@ -1427,6 +1427,7 @@ body .features .container .passion .text :is(p, h2)::selection {
 .how-it-work {
   padding: 100px 0px;
   background-color: #ececec;
+  overflow: hidden;
 }
 
 .how-it-work .container {

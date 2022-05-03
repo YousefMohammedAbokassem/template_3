@@ -77,7 +77,7 @@ window.onscroll = function () {
     });
   }
   //services
-  if (window.scrollY >= services.offsetTop - 200) {
+  if (window.scrollY >= services.offsetTop - 50) {
     boxes_services.forEach((e) => {
       e.style.opacity = 1;
       e.style.transform = "scale(1)";
