@@ -44,6 +44,9 @@ let counter = setInterval(() => {
     minutes < 10 ? `0${minutes}` : minutes;
   document.querySelector(".second").innerHTML =
     seconds < 10 ? `0${seconds}` : seconds;
+  if (days == "0") {
+    clearInterval(counter);
+  }
 }, 1000);
 
 // time down
@@ -58,8 +61,34 @@ let boxes_services = document.querySelectorAll(".services .box");
 let howItWorks = document.getElementById("how-it-work");
 let howItWorks_image = document.querySelector(".how-it-work .image");
 let howItWorks_boxes = document.querySelectorAll(".how-it-work .box");
-console.log(howItWorks_boxes);
+// stats
+let stats = document.getElementById("stats");
+let stats_Spans = document.querySelectorAll(
+  ".stats .container .box  :nth-child(2)"
+);
+let started = false;
+let end = true;
+
+// console.log(stats);
 window.onscroll = function () {
+  //
+  if (window.scrollY >= stats.offsetTop) {
+    if (started == false) {
+      stats_Spans.forEach((span) => {
+        let goal = span.dataset.goal;
+        span.innerHTML = 0;
+        let count = setInterval(() => {
+          span.textContent++;
+          if (span.textContent == goal) {
+            clearInterval(count);
+          }
+        }, 2000 / goal);
+      });
+      started = true;
+    }
+  } else {
+    started = false;
+  }
   //button
   if (window.scrollY >= 500) {
     myButton.style.display = "block";
