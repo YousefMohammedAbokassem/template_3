@@ -760,9 +760,10 @@ body .features {
       padding-top: 15px;
       position: relative;
       counter-increment: services;
-      transition: $main-transition;
+      transition: 0.5s;
+
       box-shadow: 0px 12px 20px 0px rgba(black, 0.13),
-        0px 2px 4px 0px rgba(black, 0.12);
+        0px 2px 4px 0px rgba(rgb(196, 50, 50), 0.12);
       i {
         color: #d5d5d5;
         display: block;
@@ -884,6 +885,7 @@ body .features {
             height: 100%;
             position: absolute;
             background-color: $main-color;
+            transition: 1s;
           }
         }
       }
@@ -901,6 +903,7 @@ body .features {
     }
     @include flexcenter();
     .image {
+      transition: 1s;
       img {
         max-width: 100%;
         margin-right: 90px;
@@ -915,6 +918,8 @@ body .features {
     .info {
       .box {
         @include flexcenter();
+        transition: 1s;
+
         @include media("mobile") {
           flex-direction: column;
           text-align: center;

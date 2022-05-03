@@ -1241,10 +1241,10 @@ body .features .container .passion .text :is(p, h2)::selection {
   padding-top: 15px;
   position: relative;
   counter-increment: services;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(196, 50, 50, 0.12);
+          box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(196, 50, 50, 0.12);
 }
 
 .services .container .box i {
@@ -1420,6 +1420,8 @@ body .features .container .passion .text :is(p, h2)::selection {
   height: 100%;
   position: absolute;
   background-color: #2196f3;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .how-it-work {
@@ -1444,6 +1446,11 @@ body .features .container .passion .text :is(p, h2)::selection {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.how-it-work .container .image {
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .how-it-work .container .image img {
@@ -1473,6 +1480,8 @@ body .features .container .passion .text :is(p, h2)::selection {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
   padding: 30px;
   background-color: #f6f6f6;
   position: relative;
