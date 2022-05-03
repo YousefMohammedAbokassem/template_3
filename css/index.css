@@ -242,6 +242,18 @@ body .header .nav {
           align-items: center;
 }
 
+body .header .nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media (max-width: 767px) {
   body .header .nav li {
     font-size: 18px;

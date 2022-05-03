@@ -154,6 +154,7 @@ body .header {
     @include list-reset();
     @include flexcenter();
     li {
+      @include flexcenter();
       // overflow: hidden;
       @include media("mobile") {
         font-size: 18px;
