@@ -67,7 +67,7 @@ window.onscroll = function () {
     myButton.style.display = "none";
   }
   //progress
-  if (window.scrollY >= ourSkills.offsetTop - 200) {
+  if (window.scrollY >= ourSkills.offsetTop - 150) {
     spans.forEach((ele) => {
       ele.style.width = ele.dataset.width;
     });
@@ -77,7 +77,7 @@ window.onscroll = function () {
     });
   }
   //services
-  if (window.scrollY >= services.offsetTop - 50) {
+  if (window.scrollY >= services.offsetTop - 100) {
     boxes_services.forEach((e) => {
       e.style.opacity = 1;
       e.style.transform = "scale(1)";
@@ -90,7 +90,7 @@ window.onscroll = function () {
   }
   // how-it-work
   // make edit childrenssssssss
-  if (window.scrollY >= howItWorks.offsetTop - 200) {
+  if (window.scrollY >= howItWorks.offsetTop - 150) {
     howItWorks_image.style.opacity = "1";
     howItWorks_image.style.transform = `translateX(0px)`;
     //
@@ -119,3 +119,5 @@ window.onscroll = function () {
     });
   }
 };
+
+// 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
