@@ -117,6 +117,7 @@ window.onscroll = function () {
       e.style.transform = "scale(0.4)";
     });
   }
+
   // how-it-work
   // make edit childrenssssssss
   if (window.scrollY >= howItWorks.offsetTop - 150) {
@@ -147,6 +148,6 @@ window.onscroll = function () {
       ele.style.opacity = "0.2";
     });
   }
+  
 };
 
-// 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
