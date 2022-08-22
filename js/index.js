@@ -6,10 +6,16 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 myOtherLinks = document.querySelector(".mega-li");
 myMega = document.querySelector(".mega-li .menu");
 
+let toggle = true;
 myOtherLinks.addEventListener("click", function () {
-  myMega.style.opacity = "1";
-  myMega.style.top = "74px";
-  myMega.style.setProperty("z-index", "100");
+  if (toggle) {
+    myMega.style.cssText =
+      "z-index:100; pointer-events:auto; top:74px; opacity:1;";
+    toggle = !toggle;
+  } else {
+    myMega.style.cssText = "z-index:0; pointer-events:none; top:0; opacity:0;";
+    toggle = !toggle;
+  }
 });
 
 myButton = document.querySelector(".myButton");
@@ -148,6 +154,4 @@ window.onscroll = function () {
       ele.style.opacity = "0.2";
     });
   }
-  
 };
-

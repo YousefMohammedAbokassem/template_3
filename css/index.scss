@@ -126,7 +126,9 @@ body .article {
 }
 // start header
 #header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
   background-color: white;
   box-shadow: 0 0 10px #ddd;
   padding: 3px 0px;
@@ -159,11 +161,13 @@ body .header {
       @include media("mobile") {
         font-size: 18px;
         padding: 0px 10px;
+        &.mega-li {
+          cursor: pointer;
+        }
       }
       > #header_a {
         overflow: hidden;
         position: relative;
-
         text-decoration: none;
         color: black;
         padding: 0px 27px;
@@ -200,6 +204,7 @@ body .header {
       width: 100%;
       background-color: white;
       z-index: -100;
+      pointer-events: none;
       @include flexcenter();
       top: 110px;
       opacity: 0;
