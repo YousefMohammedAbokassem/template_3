@@ -35,7 +35,7 @@ myButton.onclick = function () {
   });
 };
 // time down
-let timeDown = new Date("Dec 31, 2022 23:59:59").getTime();
+let timeDown = new Date("December 31 2022 23:59:59").getTime();
 let counter = setInterval(() => {
   let timeNow = new Date().getTime();
   let diff = timeDown - timeNow;
@@ -44,7 +44,7 @@ let counter = setInterval(() => {
   let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((diff % (1000 * 60)) / 1000);
   document.querySelector(".day ").innerHTML =
-    days < 100 ? `00${days}` : days < 10 ? `0${days}` : days;
+    days < 100 ? `0${days}` : days < 10 ? `00${days}` : days;
   document.querySelector(".hour").innerHTML = hours < 10 ? `0${hours}` : hours;
   document.querySelector(".minute").innerHTML =
     minutes < 10 ? `0${minutes}` : minutes;

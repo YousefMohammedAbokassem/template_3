@@ -6,6 +6,9 @@
   padding: 0px;
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
 // dots
 .dots {
   background-image: url("../imgs/dots.png");
@@ -326,14 +329,11 @@ body .landing {
       margin-top: 15px;
       margin-bottom: 100px;
 
-      @include media("mobile") {
+      @media (max-width: 768px) {
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 34px;
       }
-      @include media("small") {
-        margin-bottom: 100px;
-        text-align: center;
-      }
+
       > {
         h2 {
           font-size: 40px;

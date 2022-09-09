@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .dots {
   background-image: url("../imgs/dots.png");
   background-repeat: no-repeat;
@@ -373,16 +377,10 @@ body .landing .container .text {
   margin-top: 15px;
   margin-bottom: 100px;
 }
-@media (max-width:767px) {
+@media (max-width: 768px) {
   body .landing .container .text {
     text-align: center;
-    margin-bottom: 100px;
-  }
-}
-@media (max-width:991px) {
-  body .landing .container .text {
-    margin-bottom: 100px;
-    text-align: center;
+    margin-bottom: 34px;
   }
 }
 body .landing .container .text > h2 {
