@@ -175,7 +175,6 @@ body .header {
         color: black;
         padding: 0px 27px;
         font-size: 19px;
-        height: 75px;
         display: block;
         @include media("mobile") {
           font-size: 16px;
@@ -329,11 +328,14 @@ body .landing {
       margin-top: 15px;
       margin-bottom: 100px;
 
-      @media (max-width: 768px) {
+      @media (max-width: 991px) {
         text-align: center;
         margin-bottom: 34px;
       }
-
+      @media (max-width: 768px) {
+        text-align: center;
+        margin: 34px 0px;
+      }
       > {
         h2 {
           font-size: 40px;

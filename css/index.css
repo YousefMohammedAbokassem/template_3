@@ -221,7 +221,6 @@ body .header .nav li > #header_a {
   color: black;
   padding: 0px 27px;
   font-size: 19px;
-  height: 75px;
   display: block;
   display: flex;
   justify-content: center;
@@ -377,10 +376,16 @@ body .landing .container .text {
   margin-top: 15px;
   margin-bottom: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   body .landing .container .text {
     text-align: center;
     margin-bottom: 34px;
+  }
+}
+@media (max-width: 768px) {
+  body .landing .container .text {
+    text-align: center;
+    margin: 34px 0px;
   }
 }
 body .landing .container .text > h2 {
