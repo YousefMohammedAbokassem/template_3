@@ -206,10 +206,6 @@ body .header .nav li {
   align-items: center;
 }
 @media (max-width:767px) {
-  body .header .nav li {
-    font-size: 18px;
-    padding: 0px 10px;
-  }
   body .header .nav li.mega-li {
     cursor: pointer;
   }
@@ -219,7 +215,7 @@ body .header .nav li > #header_a {
   position: relative;
   text-decoration: none;
   color: black;
-  padding: 0px 27px;
+  padding: 22px;
   font-size: 19px;
   display: block;
   display: flex;
@@ -228,8 +224,8 @@ body .header .nav li > #header_a {
 }
 @media (max-width:767px) {
   body .header .nav li > #header_a {
-    font-size: 16px;
-    padding: 5px 0px;
+    font-size: 13px;
+    padding: 15px 5px;
   }
 }
 body .header .nav li > #header_a::before {
@@ -270,7 +266,7 @@ body .header .nav .menu {
   body .header .nav .menu {
     display: flex;
     flex-wrap: wrap;
-    top: 142px;
+    top: 122px !important;
     flex-direction: column;
     border-top: 1px solid #ddd;
   }
@@ -498,6 +494,13 @@ body .article .container .box:hover {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
+@media (max-width:767px) {
+  .gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+}
 .gallery .container .gallery-content {
   padding: 16px;
   box-shadow: 0 15px 10px 0px rgba(0, 0, 0, 0.12), 2px 5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -540,6 +543,13 @@ body .features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
+}
+@media (max-width:767px) {
+  body .features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
 }
 body .features .container .box {
   border: 1px solid #ccc;
@@ -801,6 +811,13 @@ body .features .container .passion .text :is(p, h2)::selection {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
 }
+@media (max-width:767px) {
+  .testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
+}
 .testimonials .container .box {
   position: relative;
   background: white;
@@ -859,6 +876,13 @@ body .features .container .passion .text :is(p, h2)::selection {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
+}
+@media (max-width:767px) {
+  .team-members .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
 }
 .team-members .container .box {
   display: flex;
@@ -962,6 +986,13 @@ body .features .container .passion .text :is(p, h2)::selection {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
 }
+@media (max-width:767px) {
+  .services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
+}
 .services .container .box {
   background: white;
   padding-top: 15px;
@@ -1048,6 +1079,13 @@ body .features .container .passion .text :is(p, h2)::selection {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 40px;
   align-items: center;
+}
+@media (max-width:767px) {
+  .our-skills .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
 }
 @media (max-width:991px) {
   .our-skills .container {
@@ -1225,6 +1263,11 @@ body .features .container .passion .text :is(p, h2)::selection {
   justify-content: center;
   align-items: center;
 }
+@media (max-width:767px) {
+  .events .container .info .time {
+    display: block;
+  }
+}
 .events .container .info .time .unit {
   margin-left: 10px;
 }
@@ -1331,6 +1374,13 @@ body .features .container .passion .text :is(p, h2)::selection {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
+}
+@media (max-width:767px) {
+  .pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  }
 }
 .pricing .container .advanced-box {
   transform: translateY(-15px);

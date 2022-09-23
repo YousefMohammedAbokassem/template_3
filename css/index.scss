@@ -162,8 +162,8 @@ body .header {
       @include flexcenter();
       // overflow: hidden;
       @include media("mobile") {
-        font-size: 18px;
-        padding: 0px 10px;
+        // font-size: 18px;
+        // padding: 0px 10px;
         &.mega-li {
           cursor: pointer;
         }
@@ -173,12 +173,12 @@ body .header {
         position: relative;
         text-decoration: none;
         color: black;
-        padding: 0px 27px;
+        padding: 22px;
         font-size: 19px;
         display: block;
         @include media("mobile") {
-          font-size: 16px;
-          padding: 5px 0px;
+          font-size: 13px;
+          padding: 15px 5px;
         }
         @include flexcenter();
         &::before {
@@ -217,7 +217,7 @@ body .header {
       @include media("mobile") {
         display: flex;
         flex-wrap: wrap;
-        top: 142px;
+        top: 122px !important;
         flex-direction: column;
         border-top: 1px solid #ddd;
       }
@@ -442,6 +442,9 @@ body .article {
 
   .container {
     @include gridcol(300px, 30px);
+    @include media("mobile") {
+      @include gridcol(250px, 30px);
+    }
     .gallery-content {
       padding: 16px;
       box-shadow: 0 15px 10px 0px rgba(black, 0.12),
@@ -485,6 +488,9 @@ body .features {
   padding: $main-padding-top 0px;
   .container {
     @include gridcol(300px, 40px);
+    @include media("mobile") {
+      @include gridcol(250px, 40px);
+    }
     .box {
       border: 1px solid #ccc;
       overflow: hidden;
@@ -603,6 +609,9 @@ body .features {
   background-color: $section-background;
   .container {
     @include gridcol(300px, 40px);
+    @include media("mobile") {
+      @include gridcol(250px, 40px);
+    }
     .box {
       position: relative;
       background: white;
@@ -658,6 +667,9 @@ body .features {
   padding: $main-padding-top 0px;
   .container {
     @include gridcol(300px, 40px);
+    @include media("mobile") {
+      @include gridcol(250px, 40px);
+    }
     .box {
       display: flex;
       flex-direction: column;
@@ -762,6 +774,9 @@ body .features {
   padding: $main-padding-top 0px;
   .container {
     @include gridcol(300px, 40px);
+    @include media("mobile") {
+      @include gridcol(250px, 40px);
+    }
     .box {
       background: white;
       padding-top: 15px;
@@ -847,6 +862,9 @@ body .features {
   padding: $main-padding-top 0px;
   .container {
     @include gridcol(450px, 40px);
+    @include media("mobile") {
+      @include gridcol(250px, 40px);
+    }
     @include media("small") {
       grid-template-columns: 1fr;
     }
@@ -1005,6 +1023,9 @@ body .features {
       flex: 1;
       .time {
         @include flexcenter();
+        @include media("mobile") {
+          display: block;
+        }
         .unit {
           margin-left: 10px;
           div {
@@ -1107,6 +1128,9 @@ body .features {
   position: relative;
   .container {
     @include gridcol(300px, 40px);
+    @include media("mobile") {
+      @include gridcol(250px, 40px);
+    }
     .advanced-box {
       transform: translateY(-15px);
       .advanced {
