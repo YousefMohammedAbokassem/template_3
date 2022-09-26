@@ -102,7 +102,7 @@ body {
     transition-delay: 0.5s;
   }
   @include media("mobile") {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 body .article {
@@ -851,7 +851,9 @@ body .features {
         width: 100%;
       }
       &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-10px) !important;
+        box-shadow: 0px 21px 20px 0px rgba(black, 0.13),
+          0px 2px 4px 0px rgba(black, 0.12);
       }
     }
   }
@@ -1318,6 +1320,7 @@ body .features {
   background-image: url(../imgs/stats.jpg);
   padding: $main-padding-top 0px;
   position: relative;
+  overflow: hidden;
   &::before {
     @include overlay(white, 0.95);
   }
