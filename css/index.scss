@@ -6,7 +6,6 @@
   padding: 0px;
   scroll-behavior: smooth;
   overflow-x: hidden;
-
 }
 body {
   overflow-x: hidden;
@@ -145,6 +144,7 @@ body .header {
   position: relative;
   height: 70px;
   text-transform: capitalize;
+  overflow: hidden;
   @include media("mobile") {
     display: block;
     height: auto;
