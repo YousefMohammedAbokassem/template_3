@@ -3,7 +3,6 @@
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -176,7 +175,6 @@ body .header {
   position: relative;
   height: 70px;
   text-transform: capitalize;
-  overflow: hidden;
 }
 @media (max-width:767px) {
   body .header {
